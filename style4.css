@@ -1,0 +1,504 @@
+.animation-bounce-left {
+    animation: bounce-left 1s infinite
+}
+
+.animation-bounce-right {
+    animation: bounce-right 1s infinite
+}
+
+@keyframes bounce-left {
+    0%,to {
+        transform: translate(-25%);
+        animation-timing-function: cubic-bezier(.8,0,1,1)
+    }
+
+    50% {
+        transform: translate(0);
+        animation-timing-function: cubic-bezier(0,0,.2,1)
+    }
+}
+
+@keyframes bounce-right {
+    0%,to {
+        transform: translate(25%);
+        animation-timing-function: cubic-bezier(.8,0,1,1)
+    }
+
+    50% {
+        transform: translate(0);
+        animation-timing-function: cubic-bezier(0,0,.2,1)
+    }
+}
+
+.gridlines {
+    --size: 32px;
+    --bg-size: var(--size) var(--size), var(--size) var(--size);
+    --grid-color: rgba(255, 255, 255, .015);
+    z-index: 10!important;
+    background-image: linear-gradient(var(--grid-color) 1px,transparent 1px),linear-gradient(90deg,var(--grid-color) 1px,transparent 1px);
+    background-size: var(--bg-size);
+    background-position: -1px -1px,-1px -1px
+}
+
+.gradient-text {
+    color: #0000;
+    -webkit-background-clip: text;
+    background-clip: text
+}
+
+.cubano {
+    font-family: Cubano
+}
+
+.oswald {
+    font-family: Oswald
+}
+
+.phudu {
+    font-family: Phudu
+}
+
+.bebas {
+    font-family: Bebas Neue
+}
+
+p>.emphasis {
+    font-size: 1.875rem;
+    line-height: 2.25rem
+}
+
+.emphasis.italic {
+    padding-right: .35rem
+}
+
+.emphasis {
+    background-image: linear-gradient(to top,var(--tw-gradient-stops));
+    --tw-gradient-from: #f97316 var(--tw-gradient-from-position);
+    --tw-gradient-to: rgb(249 115 22 / 0) var(--tw-gradient-to-position);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+    --tw-gradient-to: #f59e0b var(--tw-gradient-to-position);
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #0000;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-family: Cubano
+}
+
+.footer-shadow {
+    box-shadow: 0 0 10vh 10vh #000
+}
+
+:root {
+    --astro-card-accent: 124, 58, 237;
+    --astro-card-accent-gradient: linear-gradient( 45deg, rgb(var(--astro-card-accent)), #da62c4 30%, white 60% )
+}
+
+.link-card:where(.astro-IWPWAMT2) {
+    background-color: #fff;
+    background-image: none;
+    background-size: 400%;
+    background-position: 100%;
+    box-shadow: 0 4px 6px -1px #0000001a,0 2px 4px -2px #0000001a
+}
+
+.link-card:where(.astro-IWPWAMT2)>a:where(.astro-IWPWAMT2) {
+    color: #111;
+    background-color: #fff
+}
+
+.link-card:where(.astro-IWPWAMT2):is(:hover,:focus-within) {
+    background-position: 0;
+    background-image: var(--astro-card-accent-gradient)
+}
+
+.link-card:where(.astro-IWPWAMT2):is(:hover,:focus-within) h2:where(.astro-IWPWAMT2) {
+    color: rgb(var(--astro-card-accent))
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    #blur:where(.astro-ZWDNFROR) {
+        -webkit-backdrop-filter: blur(500vmax);
+        backdrop-filter: blur(500vmax)
+    }
+
+    #blob-follow:where(.astro-ZWDNFROR) {
+        transition: opacity 1s;
+        background-color: #fff;
+        height: 100px;
+        aspect-ratio: 1;
+        position: fixed;
+        translate: -50% -50%
+    }
+
+    #blob-follow:where(.astro-ZWDNFROR).hide {
+        opacity: 0
+    }
+
+    #blob-main:where(.astro-ZWDNFROR) {
+        height: 50vmax;
+        aspect-ratio: 1;
+        position: fixed;
+        left: -5%;
+        top: 50%;
+        scale: 1.2 .9;
+        border-radius: 50%;
+        animation: blob-rotate 20s infinite
+    }
+
+    #blob-minor:where(.astro-ZWDNFROR) {
+        height: 70vmax;
+        aspect-ratio: 1;
+        position: fixed;
+        left: -40%;
+        top: -60%;
+        scale: 1.2 1.1;
+        border-radius: 50%;
+        animation: blob-rotate 20s infinite
+    }
+
+    @keyframes blob-rotate {
+        0% {
+            rotate: 0deg
+        }
+
+        50% {
+            scale: 1 1.3
+        }
+
+        to {
+            rotate: 360deg
+        }
+    }
+}
+
+.hide:where(.astro-WWYXSOFQ) {
+    display: none;
+    --tw-translate-y: 2rem;
+    --tw-scale-x: .75;
+    --tw-scale-y: .75;
+    transform: translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    opacity: 0
+}
+
+@media (min-width: 864px) {
+    .hide:where(.astro-WWYXSOFQ) {
+        display:block
+    }
+}
+
+.show:where(.astro-WWYXSOFQ) {
+    --tw-translate-y: 2rem;
+    --tw-scale-x: .75;
+    --tw-scale-y: .75;
+    transform: translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    opacity: 0
+}
+
+@media (min-width: 864px) {
+    .show:where(.astro-WWYXSOFQ) {
+        --tw-translate-y: 0px;
+        --tw-scale-x: 1;
+        --tw-scale-y: 1;
+        transform: translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+        opacity: 1
+    }
+}
+
+.card:where(.astro-DOHJNAO5).available:hover {
+    --tw-scale-x: 1.05;
+    --tw-scale-y: 1.05;
+    transform: translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+
+.card-link:where(.astro-DOHJNAO5).unavailable {
+    cursor: not-allowed
+}
+
+.icon-astro:hover .astro-flame {
+    fill: #ff5d01
+}
+
+.icon-astro:hover .astro-a {
+    fill: #fff
+}
+
+.icon-github:hover {
+    fill: #f0f6fc
+}
+
+.icon-youtube:hover {
+    fill: #fd0101
+}
+
+.icon-twitter:hover {
+    fill: #1d9ff0
+}
+
+.icon-discord:hover {
+    fill: #5662f6
+}
+
+.image-lazy-load:where(.astro-CUCLTFFX) {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center
+}
+
+.image-lazy-load:where(.astro-CUCLTFFX) img:where(.astro-CUCLTFFX) {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: center;
+    object-position: center;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(.4,0,.2,1);
+    transition-duration: .3s
+}
+
+.image-lazy-load:where(.astro-CUCLTFFX).not-loaded:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    animation: image-lazy-load-skeleton 2.5s infinite
+}
+
+.image-lazy-load:where(.astro-CUCLTFFX).not-loaded>img:where(.astro-CUCLTFFX) {
+    opacity: 0
+}
+
+.image-lazy-load:where(.astro-CUCLTFFX).loaded.loaded:before {
+    content: none
+}
+
+.image-lazy-load:where(.astro-CUCLTFFX).loaded>img:where(.astro-CUCLTFFX) {
+    opacity: 1
+}
+
+@keyframes image-lazy-load-skeleton {
+    0%,to {
+        background-color: #fff0
+    }
+
+    50% {
+        background-color: #ffffff1a
+    }
+}
+
+#pagination:where(.astro-646ZC6RF) {
+    --tw-translate-y: 2rem;
+    transform: translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    opacity: 0;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(.4,0,.2,1);
+    transition-duration: .15s
+}
+
+.show:where(.astro-646ZC6RF) {
+    --tw-translate-y: .75rem !important;
+    transform: translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))!important;
+    opacity: 1!important
+}
+
+.marquee:where(.astro-TPUDEAZ7) {
+    --gap: 1rem;
+    display: flex;
+    overflow: hidden;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    gap: var(--gap)
+}
+
+.marquee__content:where(.astro-TPUDEAZ7) {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-around;
+    min-width: 100%;
+    gap: var(--gap)
+}
+
+@keyframes scroll {
+    0% {
+        transform: translate(0)
+    }
+
+    to {
+        transform: translate(calc(-100% - var(--gap)))
+    }
+}
+
+.noise-panel:where(.astro-EOWYF2DM):before {
+    position: absolute;
+    inset: 0;
+    z-index: -20;
+    opacity: .6;
+    mix-blend-mode: overlay;
+    content: "";
+    background-image: url(/noise.webp);
+    border-radius: 1rem
+}
+
+.place-items-end:where(.astro-J47WFRWS) {
+    place-items: end
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .scroll-show-hidden:where(.astro-J47WFRWS) {
+        opacity: 0;
+        translate: 0% 50%;
+        filter: blur(2px);
+        transition: all .8s
+    }
+
+    .scroll-show-show:where(.astro-J47WFRWS) {
+        opacity: 1;
+        filter: blur(0);
+        translate: 0% 0%
+    }
+}
+
+button:where(.astro-SDMFG6XT) {
+    position: fixed;
+    bottom: 1.25rem;
+    right: 1.25rem;
+    display: grid;
+    height: 2.5rem;
+    width: 2.5rem;
+    --tw-translate-y: 2rem;
+    --tw-scale-x: .75;
+    --tw-scale-y: .75;
+    transform: translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    place-items: center;
+    padding: 0;
+    opacity: 0;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(.4,0,.2,1);
+    transition-duration: .15s
+}
+
+button:where(.astro-SDMFG6XT)>svg:where(.astro-SDMFG6XT) {
+    height: 1.25rem;
+    width: 1.25rem
+}
+
+.show:where(.astro-SDMFG6XT) {
+    --tw-translate-y: 0px;
+    --tw-scale-x: 1;
+    --tw-scale-y: 1;
+    transform: translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    cursor: pointer;
+    border-radius: 9999px;
+    border-style: none;
+    background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+    --tw-bg-opacity: .5;
+    --tw-text-opacity: 1;
+    color: rgb(156 163 175 / var(--tw-text-opacity));
+    opacity: 1;
+    outline: 2px solid transparent;
+    outline-offset: 2px
+}
+
+.show:where(.astro-SDMFG6XT):hover {
+    --tw-text-opacity: 1;
+    color: rgb(249 115 22 / var(--tw-text-opacity))
+}
+
+.show:where(.astro-SDMFG6XT):focus {
+    --tw-text-opacity: 1;
+    color: rgb(249 115 22 / var(--tw-text-opacity))
+}
+
+.content-skip:where(.astro-SVSPNZ7O) {
+    font-family: Cubano;
+    z-index: 999;
+    position: absolute;
+    top: 1.25rem;
+    left: 1.25rem;
+    display: block;
+    --tw-translate-y: -200%;
+    transform: translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    border-radius: .5rem;
+    border-width: 2px;
+    --tw-border-opacity: 1;
+    border-color: rgb(248 250 252 / var(--tw-border-opacity));
+    --tw-bg-opacity: 1;
+    background-color: rgb(24 24 27 / var(--tw-bg-opacity));
+    padding: 1rem;
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    font-weight: 900;
+    --tw-text-opacity: 1;
+    color: rgb(250 250 250 / var(--tw-text-opacity));
+    transition-property: all;
+    transition-duration: .15s;
+    transition-timing-function: cubic-bezier(.4,0,.2,1)
+}
+
+.content-skip:where(.astro-SVSPNZ7O):focus {
+    --tw-translate-y: 0px;
+    transform: translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+
+#sidebar:where(.astro-OBEWOZ47) {
+    box-shadow: inset 0 0 1rem -.1rem #000
+}
+
+@keyframes astroFadeInOut {
+    0% {
+        opacity: 1
+    }
+
+    to {
+        opacity: 0
+    }
+}
+
+@keyframes astroFadeIn {
+    0% {
+        opacity: 0
+    }
+}
+
+@keyframes astroFadeOut {
+    to {
+        opacity: 0
+    }
+}
+
+@keyframes astroSlideFromRight {
+    0% {
+        transform: translate(100%)
+    }
+}
+
+@keyframes astroSlideFromLeft {
+    0% {
+        transform: translate(-100%)
+    }
+}
+
+@keyframes astroSlideToRight {
+    to {
+        transform: translate(100%)
+    }
+}
+
+@keyframes astroSlideToLeft {
+    to {
+        transform: translate(-100%)
+    }
+}
+
+@media (prefers-reduced-motion) {
+    ::view-transition-group(*),::view-transition-old(*),::view-transition-new(*) {
+        animation: none!important
+    }
+
+    [data-astro-transition-scope] {
+        animation: none!important
+    }
+}
